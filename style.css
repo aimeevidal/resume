@@ -1,0 +1,23 @@
+#prof-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+body {
+    background-color: #EADFB4;
+    color: #51829B;
+}
+
+header {
+    background-color: #F6995C;
+}
+
+footer {
+    background-color: #9BB0C1;
+    height: 150px;
+}
+
+.container {
+    border: #51829B;
+}
