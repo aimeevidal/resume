@@ -196,6 +196,15 @@ body {
     background-color: black;
     position: relative;
     border-radius: 80px;
+    color: white;
+}
+
+.unlock-message {
+    /* color: white; */
+    position: absolute;
+    top: 20vh;
+    left: 7vh;
+    /* text-align: center; */
 }
 
 .screen-bezzel {
@@ -208,6 +217,30 @@ body {
     border-radius: 80px;
     z-index: 2;
     /* display: none; */
+
+    /* animation */
+    display: none;
+    transform-origin: center;
+    animation: showProfile 0.5s ease-in forwards;
+
+}
+
+:is(.screen-edge:hover, screen-edge:focus-within) .screen-bezzel {
+    display: block;
+}
+
+@keyframes showProfile {
+    0% {
+        transform: scaleY(0);
+    }
+
+    50% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
 }
 
 .fake-app-header {
@@ -278,27 +311,23 @@ body {
     /* background-color: blue; */
     grid-column: span 3;
     background-color: #22A69950;
+
+    /* display: none;
+    transform-origin: top center;
+    animation: showAbout 1s ease-in forwards; */
 }
+
+
+:is(.about-me-grid:hover, .about-me-grid:focus-within) .about-box {
+    display: block;
+}
+
+
 
 .about-box p {
     /* width: 90%; */
     /* padding: 1rem; */
     margin-inline: auto;
-}
-
-.box {
-    color: black;
-    padding: 1rem;
-}
-
-.work-exp-box,
-.skill-box,
-.training-box {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-shrink: 1;
 }
 
 .work-exp-box {
@@ -318,6 +347,80 @@ body {
     grid-column-start: span 3;
     background-color: #F24C3D50;
 }
+
+.box {
+    color: black;
+    padding: 1rem;
+}
+
+.about-box {
+    display: none;
+    transform-origin: top;
+    animation: showAbout 1.2s ease-in forwards;
+}
+
+.work-exp-box {
+    display: none;
+    transform-origin: left;
+    animation: showAbout 1.2s ease-in forwards;
+}
+
+.skill-box {
+    display: none;
+    transform-origin: right;
+    animation: showAbout 1.5s ease-in forwards;
+}
+
+
+.training-box {
+    display: none;
+    transform-origin: bottom;
+    animation: showAbout 1.8s ease-in forwards;
+}
+
+:is(.about-me-grid:hover, .about-me-grid:focus-within) .work-exp-box
+{
+    
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+:is(.about-me-grid:hover, .about-me-grid:focus-within) .skill-box
+{
+    
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+:is(.about-me-grid:hover, .about-me-grid:focus-within) .training-box {
+    
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+
+@keyframes showAbout {
+    0% {
+        transform: scaleY(0);
+    }
+
+    50% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
 
 .box ul {
     list-style-type: none;
