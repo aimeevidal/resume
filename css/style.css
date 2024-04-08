@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+    /* Color variables */
+    --FIRST-PAGE-BGCOLOR: #22A699; 
+    --SECOND-PAGE-BGCOLOR: #F2BE22;
+    --THIRD-PAGE-BGCOLOR: #F29727;
+    --FOURTH-PAGE-BGCOLOR: #F24C3D;
+
+    --HEADER-FOOTER-BGCOLOR: #2D272790;
+
+    /* Fonts */
+    --SERIF-FONT: "Vollkorn", serif;
+    --SANS-SERIF-FONT: "Roboto", sans-serif;
+
+    --LIGHT-FONT-COLOR: #fff;
+
+    --HEADER-TEXT-SHADOW: #000 1px 1px 3px;
+}
+
+/* Utility Classes */
+.nowrap {
+    white-space: nowrap;
+}
+/* General Styles */
+
+body {
+    font-family: var(--SANS-SERIF-FONT);
+    color: var(--LIGHT-FONT-COLOR);
+    font-weight: 400;
+    line-height: 1.5;
+    
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.header-section, .footer-section {
+    height: 10vh;
+    background-color: var(--HEADER-FOOTER-BGCOLOR);
+    position: absolute;
+    width: 100%;
+}
+
+.header-section {
+    top: 0;
+}
+
+.footer-section {
+    bottom: 0;
+}
+
+.section h1 {
+    font-size: min(4rem, 8vh);
+    color: var(--LIGHT-FONT-COLOR);
+    text-shadow: var(--HEADER-TEXT-SHADOW);
+}
+
+.section h2 {
+    font-size: min(3rem, 6vh);
+    color: var(--LIGHT-FONT-COLOR);
+    text-shadow: var(--HEADER-TEXT-SHADOW);
+}
+
+.section h3 {
+    font-size: min(2rem, 4vh);
+    color: var(--LIGHT-FONT-COLOR);
+    text-shadow: var(--HEADER-TEXT-SHADOW);
+}
+
+
+.first {
+    background-color: var(--FIRST-PAGE-BGCOLOR);
+}
+
+.second { 
+    background-color:var(--SECOND-PAGE-BGCOLOR);
+}
+
+.third {
+    background-color:var(--THIRD-PAGE-BGCOLOR);
+}
+
+.fourth {
+    background-color:var(--FOURTH-PAGE-BGCOLOR);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-image {
+    text-align: center;
+    
+}
+
+.profile-image img {
+    border: 2px double #fff;
+    border-radius: 50%;
+    width: 100%;
+}
+
+.profile-caption p {
+    color: black;
+    text-align: left;
+    display: block;
+    width: 50%;
+    line-height: 1;
+}
+
+.profile-caption p:first-child {
+    color: black;
+    font-weight: bolder;
+}
+
+.profile-caption p:nth-child(2) {
+    color: black;
+    
+}
+
+.profile-caption p:nth-child(3) {
+    color: black;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+
+.main-content p {
+    font-size: 2rem;
+    width: min(35rem, 60vw);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.main-content p:last-child {
+    font-size: 1.5rem;
+}
+
+.fake-post .handle {
+    border-bottom: none;
+}
+
+.fake-post p {
+    color: black;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-inline: auto;
+    text-align: left;
+    font-size: 1.8rem;
+}
+
+.fake-post p::before {
+    content: "@aimeevidal \a";
+    white-space: pre;
+}
+
+.main-content a:any-link {
+    color: inherit;
+}
+
+.main-content a:hover, .main-content a:focus {
+    transform: scale(2, 2); /* Equal to scaleX(0.7) scaleY(0.7) */
+    background-color: pink;
+}
+
+/*SECOND PAGE */
+
+.screen-edge {
+    width: 70vw;
+    height: 70vh;
+    background-color: black;
+    position: relative;
+    border-radius: 80px;
+}
+
+.screen-bezzel {
+    width: 65vw;
+    height: 65vh;
+    background-color: white;
+    position: absolute;
+    top: 2.5vh;
+    left: 2.5vw;
+    border-radius: 80px;
+    z-index: 2;
+    /* display: none; */
+}
+
+.fake-app-header {
+    width: 100%;
+    height: 15vh;
+    background-color:deepskyblue;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    
+}
+
+.prof-img {
+    /* text-align: center; */
+    margin-left: 1rem;
+    margin-top: -10rem;
+}
+
+.prof-img img {
+    border: 2px double #fff;
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+}
+
+
+/* Third page */
+
+.fake-browser-edge {
+    width: 85vw;
+    height: 75vh;
+    background-color: white;
+    position: relative;
+}
+
+.fake-browser-bezzel {
+    width: 100%;
+    height: 3vh;
+    background-color: lightgrey;
+    position: absolute;
+    top: 0;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: center; */
+}
+
+.fake-browser-bezzel p {
+    text-align: left;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.about-me-grid {
+    position: absolute;
+    top: 3vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    height: calc(100% - 3vh);
+    padding: 1vh;
+    
+}
+
+.box p, .box ul li {
+    font-size: 1.7rem;
+}
+.about-box {
+    /* background-color: blue; */
+    grid-column: span 3;
+    background-color: #22A69950;
+}
+
+.about-box p {
+    /* width: 90%; */
+    /* padding: 1rem; */
+    margin-inline: auto;
+}
+
+.box {
+    color: black;
+    padding: 1rem;
+}
+
+.work-exp-box,
+.skill-box,
+.training-box {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.work-exp-box {
+    /* background-color: red; */
+    background-color: #F2BE2250;
+
+}
+
+.skill-box {
+    /* background-color: yellow; */
+    background-color: #F2972750;
+}
+
+.training-box {
+    /* background-color: green; */
+    grid-row-start: 3;
+    grid-column-start: span 3;
+    background-color: #F24C3D50;
+}
+
+.box ul {
+    list-style-type: none;
+}
+
+
+/* .head-sec-one,
+.foot-sec-one {
+    background-color: var(--SECOND-PAGE-BGCOLOR);
+}
+
+.head-sec-two, .foot-sec-two {
+    background-color: var(--THIRD-PAGE-BGCOLOR);
+}
+
+.head-sec-three, .foot-sec-three {
+    background-color: var(--FOURTH-PAGE-BGCOLOR);
+}
+
+.head-sec-four, .foot-sec-four {
+    background-color: var(--FIRST-PAGE-BGCOLOR);
+} */
