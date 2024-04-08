@@ -112,11 +112,17 @@
         <header class="header-section head-sec-three"></header>
         <article class="third-main">
           <figure class="widget widget-one">
-            <img src="./assets/images/notes-widget.png" />
+            <div class="note-header"></div>
+            <div class="note-message">
+              <p>My Portfolio Page</p>
+              <p>Click on any of the icons below to view some of my work.</p>
+            </div>
             <!-- <figcaption>App 1</figcaption> -->
           </figure>
           <figure class="widget widget-two">
-            <img src="./assets/images/calendar-widget.png" />
+            <p id="current-day"></p>
+            <p id="current-date"></p>
+            <p class="event-message">No events today</p>
             <!-- <figcaption>App 1</figcaption> -->
           </figure>
 
@@ -179,5 +185,26 @@
         <footer class="footer-section foot-sec-four"></footer>
       </section>
     </div>
+    <script>
+      // Get current date and time
+      const daysOfWeek = [
+        "SUNDAY",
+        "MONDAY",
+        "TUESDAY",
+        "WEDNESDAY",
+        "THURSDAY",
+        "FRIDAY",
+        "SATURDAY",
+      ];
+      var now = new Date();
+      var datetime = now.toLocaleString();
+      let day = now.getDay();
+      let date = now.getDate();
+
+      let current_day = daysOfWeek[day];
+      // Insert date and time into HTML
+      document.getElementById("current-day").innerHTML = current_day;
+      document.getElementById("current-date").innerHTML = date;
+    </script>
   </body>
 </html>

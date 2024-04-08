@@ -100,11 +100,13 @@ body {
 }
 
 .third {
-    background-color:var(--THIRD-PAGE-BGCOLOR);
+    /* background-color:var(--THIRD-PAGE-BGCOLOR); */
+    background: radial-gradient(aliceblue, var(--THIRD-PAGE-BGCOLOR));
 }
 
 .fourth {
     background-color:var(--FOURTH-PAGE-BGCOLOR);
+    /* background: radial-gradient(aliceblue, var(--FOURTH-PAGE-BGCOLOR)); */
 }
 
 .main-content {
@@ -432,7 +434,7 @@ body {
     height: 12rem;
     width: 12rem;
 
-    border: 1px solid #000;
+    border: 1px solid #fff;
     border-radius: 20px;
     text-align: center;
     margin-bottom: 2.5rem;
@@ -445,7 +447,7 @@ body {
     height: 25.5rem;
     width: 25.5rem;
 
-    border: 1px solid #000;
+    border: 1px solid #fff;
     border-radius: 20px;
     text-align: center;
     margin-bottom: 2.5rem;
@@ -455,7 +457,7 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     border-radius: 20px;
 }
 
@@ -469,7 +471,7 @@ figcaption {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     border-radius: 20px;
 }
 
@@ -485,9 +487,58 @@ figcaption {
 .widget-one {
     grid-column-start: span 2;
     grid-row: span 2;
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+.note-header {
+    width: 100%;
+    height: 4rem;
+    background-color: #FFD52E;
+    top: 0;
+    border: 1px solid #FFD52E;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 3px dotted grey;
+}
+
+.note-message {
+    color: #e5e5e5;
+    font-size: 2rem;
+    text-align: left;
+    padding: 1rem;
+}
+
+.note-message p:first-child {
+    color: black;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .widget-two {
     grid-column-start: span 2;
     grid-row: span 2;
+    background-color: #f9f9f9;
+    text-align: left;
+    padding: 1.5rem;
+    color: black;
+    
+}
+
+.widget-two #current-day {
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.widget-two #current-date {
+    color: black;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.event-message {
+    color: #e5e5e5;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
